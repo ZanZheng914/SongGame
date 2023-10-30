@@ -11,14 +11,15 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
-    <audio autoplay id="backgroundMP3">
+    <audio loop id="backgroundMP3">
         <source  src="./audios/indexbackground.MP3" type="audio/MP3">
         你的瀏覽器不支援音樂播放！
     </audio>
 
-    <div class="logoimg">
+    <div class="logoimg" onclick="backgroundMusic()">
         <img class="shake" src="/images/logo21.png" id="logocat">
         <img class="rotate" src="/images/circle2.png" id="logohead">
     </div>
@@ -33,38 +34,43 @@
             <p id="songname">李榮浩&nbsp;&nbsp;烏梅子醬</p>
         </div>
         <div class="songnumber">第<span id="questionNum">&nbsp;1&nbsp;</span>題</div>
-        <ul class="lrc1" id="lrc1">
-            <li id="q100">・・・・・・・・</li>
-            <li id="q101">背靠在樹枝上</li>
-            <li id="q102">蜻蜓落在露水旁乘涼</li>
-            <li id="q103">表白後的烏梅樹下</li>
-            <li id="q104">土壤發了芽</li>
-            <li id="q105">美得不像話</li>
-            <li id="q106">再讓我想一想</li>
-            <li id="q107">那最膩的情話怎麼講</li>
-            <li id="q108">慢火熬的細水長流</li>
-            <li id="q109">念長長久久</li>
-            <li id="q110">約好到白頭</li>
-            <li id="q111">你淺淺的微笑就像 烏梅子醬</li>
-            <li id="q112">我嚐了你嘴角唇膏 薄荷味道</li>
-            <li id="q113">是甜甜的愛情 來的這麼確定</li>
-            <li id="q114">因為你每個害羞的反應</li>
-            <li id="q115">你淺淺的微笑就像 烏梅子醬</li>
-            <li id="q116">★★★★★★★★ 我好喜歡</li>
-            <li id="q117">&nbsp;</li>
-            <li id="q118">&nbsp;</li>
-            <li id="q119">厚厚的甜蜜感用幸福秤桿秤一些收藏</li>
-            <li id="q120">合照一張和夕陽</li>
-        </ul>
-            <div class="containerq1" onclick="showq1btn()" >
-                <div class="row" id="selectable">
-                    <div class="col-5 q1section" id="q1A">微風撫摸你的臉龐</div>
-                    <div class="col-5 q1section" id="q2B">星光映照你的微笑</div>
-                    <div class="col-5 q1section" id="q3C">陽光映照你的笑容</div>
-                    <div class="col-5 q1section" id="q4D">迎風吹過你的頭髮</div>
-                </div>
+        <div class="lrc1section">    
+            <ul class="lrc1" id="lrc1">
+                <li>&nbsp;</li>
+                <li>&nbsp;</li>
+                <li>&nbsp;</li>
+                <li id="q100">・・・・・・・・</li>
+                <li id="q101">背靠在樹枝上</li>
+                <li id="q102">蜻蜓落在露水旁乘涼</li>
+                <li id="q103">表白後的烏梅樹下</li>
+                <li id="q104">土壤發了芽</li>
+                <li id="q105">美得不像話</li>
+                <li id="q106">再讓我想一想</li>
+                <li id="q107">那最膩的情話怎麼講</li>
+                <li id="q108">慢火熬的細水長流</li>
+                <li id="q109">念長長久久</li>
+                <li id="q110">約好到白頭</li>
+                <li id="q111">你淺淺的微笑就像 烏梅子醬</li>
+                <li id="q112">我嚐了你嘴角唇膏 薄荷味道</li>
+                <li id="q113">是甜甜的愛情 來的這麼確定</li>
+                <li id="q114">因為你每個害羞的反應</li>
+                <li id="q115">你淺淺的微笑就像 烏梅子醬</li>
+                <li id="q116">★★★★★★★★ 我好喜歡</li>
+                <li id="q117">&nbsp;</li>
+                <li id="q118">&nbsp;</li>
+                <li id="q119">厚厚的甜蜜感用幸福秤桿秤一些收藏</li>
+                <li id="q120">合照一張和夕陽</li>
+            </ul>
+        </div>
+        <div class="containerq1" onclick="showq1btn()" >
+            <div class="row" id="selectable">
+                <div class="col-5 q1section" id="q1A">微風撫摸你的臉龐</div>
+                <div class="col-5 q1section" id="q2B">星光映照你的微笑</div>
+                <div class="col-5 q1section" id="q3C">陽光映照你的笑容</div>
+                <div class="col-5 q1section" id="q4D">迎風吹過你的頭髮</div>
             </div>
-            <button id="q1btn">送出答案</button>
+        </div>
+        <button id="q1btn">送出答案</button>
     </div>
 
 
