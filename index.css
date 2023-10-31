@@ -87,15 +87,15 @@ font-size: 20px;
 justify-content: end;
 margin-right: 5%;
 color: white;
-margin-top: 45px;
+/* margin-top: 45px; */
 }
 .songnumber{
     text-align: left;
     font-size: 26px;
     justify-content: start;
-    margin-left: 5%;
+    margin-left: 9%;
     color:#EAF9D9;
-    margin-top: -30px;
+    margin-top: 30px;
     font-weight: bold;
     }
 
@@ -112,25 +112,27 @@ li{
     color: black;
     background-color:white;
     border: 1px black solid;
-    margin: 8px auto;
-    /* margin-top: 10px; */
-    height: 20%;
-    border-radius: 3px;
+    margin: 5px auto;
+    height: 25%;
+    border-radius: 5px;
+    justify-content: center;
 }
 .selected{
     background-color: #FFB86F;
 }
 
 .lrc1section{
-    width: 330px;
+    width: 350px;
     height: 150px;
     overflow-y: auto;
     margin: 0 auto;
 }
 .lrc1 li{
     display: block;
+    text-align: center;
     padding: 3px 0;
 }
+/* 正常是88秒 */
 .lrc1section .lrc1 li{
     animation: scroll 88s linear forwards;
 }
@@ -148,17 +150,17 @@ li{
 #q103 {    animation-delay: 12s;   }
 #q104 {    animation-delay: 13s;   }
 #q105 {    animation-delay: 14s;   }
-#q106 {    animation-delay: 15s;   }
-#q107 {    animation-delay: 15s;   }
-#q108 {    animation-delay: 16s;   }
-#q109 {    animation-delay: 16s;   }
-#q110 {    animation-delay: 16s;   }
-#q111 {    animation-delay: 16s;   }
-#q112 {    animation-delay: 16s;   }
-#q113 {    animation-delay: 16s;   }
-#q114 {    animation-delay: 16s;   }
-#q115 {    animation-delay: 16s;   }
-#q116 {    animation-delay: 16s;   }
+#q106 {    animation-delay: 14s;   }
+#q107 {    animation-delay: 14s;   }
+#q108 {    animation-delay: 14s;   }
+#q109 {    animation-delay: 14s;   }
+#q110 {    animation-delay: 14s;   }
+#q111 {    animation-delay: 14s;   }
+#q112 {    animation-delay: 14s;   }
+#q113 {    animation-delay: 14s;   }
+#q114 {    animation-delay: 14s;   }
+#q115 {    animation-delay: 14s;   }
+#q116 {    animation-delay: 14s;   }
 
 
 
@@ -197,3 +199,7 @@ li{
 #q118 {    animation-delay: 2s;   }
 #q119 {    animation-delay: 5s; animation-duration: 34s;  }
 #q120 {    animation-delay: 8s; animation-duration: 38s;  }
+
+.question2{
+    display: none;
+}

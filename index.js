@@ -28,7 +28,7 @@ function backgroundMusic(){
     backgroundMusic.play();
 }
 Swal.fire({
-    title: '點擊上方貓貓播放背景音樂',
+    title: '點上方👆貓貓播放背景音樂',
     customClass:{
         popup:'mypopup',
         title:'mypopuptitle'
@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded',function(){
         element.addEventListener('animationend',function(){
             var q1sections = document.querySelectorAll('.q1section');
             q1sections.forEach(function(q1section){
-                q1section.style.display = 'block';
+                q1section.style.display = 'flex';
             })        
         })
     });   
@@ -58,4 +58,43 @@ function q1answer(){
     lrc11section.style.display ="block";
     var lrc1section = document.getElementsByClassName('lrc1section')[0];
     lrc1section.style.display = "none" ;
+    
+    var selectedAnswer1 = document.querySelector('.q1section.selected').id;
+    var correctAnswer1 = 'q1D';
+    if (selectedAnswer1 === correctAnswer1){
+        Swal.fire({
+            icon: 'success',
+            title:'正確答案！你真聰明',
+            showConfirmButton: false,
+            timer: 2500,
+        })
+    } else{
+        Swal.fire({
+            icon: 'error',
+            title:'加油加油',
+            showConfirmButton: false,
+            timer: 2500,
+        })
+    };
+    var q1btn = document.getElementsByClassName('q1btn')[0];
+    q1btn.style.display="none";
 }
+
+document.addEventListener('DOMContentLoaded',function(){
+    var lrc11Elements = document.querySelectorAll('.lrc11section .lrc11 li');
+    lrc11Elements.forEach(function(element){
+        element.addEventListener('animationend',function(){
+            Swal.fire({
+                showConfirmButton: true,
+                confirmButtonText: '下一題',
+            }).then((result)=>{
+                if(result.isConfirmed){
+                    var question2 = document.querySelector('.question2');
+                    question2.style.display = 'block';
+                    var question1 = document.getElementsByClassName('question1')[0];
+                    question1.style.display= 'none';
+                }
+            })
+            })        
+        })
+    });   
