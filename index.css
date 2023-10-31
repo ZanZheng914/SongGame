@@ -185,7 +185,7 @@ li{
     padding: 4px 0;
 }
 .lrc11section .lrc11 li{
-    animation: scroll2 24s linear forwards;
+    animation: scroll2 25s linear forwards;
 }
 @keyframes scroll2{
     from{
@@ -196,9 +196,9 @@ li{
     }
 }
 #q117 {    animation-delay: 1s;   }
-#q118 {    animation-delay: 2s;   }
-#q119 {    animation-delay: 5s; animation-duration: 34s;  }
-#q120 {    animation-delay: 8s; animation-duration: 38s;  }
+#q118 {    animation-delay: 2s; animation-duration: 26s;  }
+#q119 {    animation-delay: 4s; animation-duration: 40s;  }
+#q120 {    animation-delay: 7s; animation-duration: 47s;  }
 
 .question2{
     display: none;
