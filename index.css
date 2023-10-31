@@ -13,9 +13,9 @@ body{
     background-image: url(/images/pexels-cliford-mervil-2469122.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    /* width: 1000px;
-    height: 1344px; 
-    overflow: hidden; */
+    /* width: 400px;
+    height: 625px;  */
+    /* overflow: hidden; */
 }
 .mypopup{
     background-color: rgba(255,255,255,0.7);
@@ -49,7 +49,7 @@ body{
     display: flex;
     justify-content: center;
     margin: auto;
-    top:-46px;left: 84px;
+    top:-46px;left: 82px;
     z-index: 1;
 }
 
@@ -94,7 +94,7 @@ margin-top: 45px;
     font-size: 26px;
     justify-content: start;
     margin-left: 5%;
-    color:gold;
+    color:#EAF9D9;
     margin-top: -30px;
     font-weight: bold;
     }
@@ -122,35 +122,48 @@ li{
 }
 
 .lrc1section{
-    width: 300px;
+    width: 330px;
     height: 150px;
     overflow-y: auto;
-    /* background-color: red; */
     margin: 0 auto;
 }
 .lrc1 li{
     display: block;
-    padding: 4px 0;
+    padding: 3px 0;
 }
-/* .fadeOutTopRight{
-    animation: fadeOutTopRight;
-    animation-duration: 0.8s;
-} */
-.lrc1section .lrc1{
-    animation: scroll 100s 0s linear;
+.lrc1section .lrc1 li{
+    animation: scroll 88s linear forwards;
 }
 @keyframes scroll{
-    form{
+    from{
         transform: translateY(0);
     }
     to{
-        transform: translateY(-2000px);
+        transform: translateY(-1000px);
     }
 }
+#q100 {    animation-delay: 6s;   }
+#q101 {    animation-delay: 9s;   }
+#q102 {    animation-delay: 10s;   }
+#q103 {    animation-delay: 12s;   }
+#q104 {    animation-delay: 13s;   }
+#q105 {    animation-delay: 14s;   }
+#q106 {    animation-delay: 15s;   }
+#q107 {    animation-delay: 15s;   }
+#q108 {    animation-delay: 16s;   }
+#q109 {    animation-delay: 16s;   }
+#q110 {    animation-delay: 16s;   }
+#q111 {    animation-delay: 16s;   }
+#q112 {    animation-delay: 16s;   }
+#q113 {    animation-delay: 16s;   }
+#q114 {    animation-delay: 16s;   }
+#q115 {    animation-delay: 16s;   }
+#q116 {    animation-delay: 16s;   }
+
+
 
 #q1btn{
     display: none;
-    /* display: flex; */
     justify-content: center;
     align-items: center;
     height: 40px;
@@ -158,3 +171,29 @@ li{
     margin: auto;
     background-color:lightblue;
 }
+.lrc11section{
+    width: 330px;
+    height: 150px;
+    overflow-y: auto;
+    margin: 0 auto;
+    display: none;
+}
+.lrc11 li{
+    display: block;
+    padding: 4px 0;
+}
+.lrc11section .lrc11 li{
+    animation: scroll2 24s linear forwards;
+}
+@keyframes scroll2{
+    from{
+        transform: translateY(0);
+    }
+    to{
+        transform: translateY(-1000px);
+    }
+}
+#q117 {    animation-delay: 1s;   }
+#q118 {    animation-delay: 2s;   }
+#q119 {    animation-delay: 5s; animation-duration: 34s;  }
+#q120 {    animation-delay: 8s; animation-duration: 38s;  }

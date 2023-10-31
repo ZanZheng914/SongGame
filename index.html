@@ -12,6 +12,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 </head>
 <body>
     <audio loop id="backgroundMP3">
@@ -36,9 +37,7 @@
         <div class="songnumber">第<span id="questionNum">&nbsp;1&nbsp;</span>題</div>
         <div class="lrc1section">    
             <ul class="lrc1" id="lrc1">
-                <li>&nbsp;</li>
-                <li>&nbsp;</li>
-                <li>&nbsp;</li>
+                <li>&nbsp;&nbsp;&nbsp;</li>
                 <li id="q100">・・・・・・・・</li>
                 <li id="q101">背靠在樹枝上</li>
                 <li id="q102">蜻蜓落在露水旁乘涼</li>
@@ -55,9 +54,14 @@
                 <li id="q113">是甜甜的愛情 來的這麼確定</li>
                 <li id="q114">因為你每個害羞的反應</li>
                 <li id="q115">你淺淺的微笑就像 烏梅子醬</li>
+                <li> &nbsp;&nbsp;&nbsp;</li>
                 <li id="q116">★★★★★★★★ 我好喜歡</li>
+            </ul>          
+        </div>
+        <div class="lrc11section">
+            <ul class="lrc11" id="lrc11">
                 <li id="q117">&nbsp;</li>
-                <li id="q118">&nbsp;</li>
+                <li id="q118">迎風吹過你的頭髮 我好喜歡</li>
                 <li id="q119">厚厚的甜蜜感用幸福秤桿秤一些收藏</li>
                 <li id="q120">合照一張和夕陽</li>
             </ul>
@@ -70,7 +74,7 @@
                 <div class="col-5 q1section" id="q4D">迎風吹過你的頭髮</div>
             </div>
         </div>
-        <button id="q1btn">送出答案</button>
+        <button class="q1btn" id="q1btn" onclick="q1answer()">送出答案</button>
     </div>
 
 
