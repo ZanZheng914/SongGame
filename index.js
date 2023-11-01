@@ -13,8 +13,9 @@ function startGame(){
 }
 
 $(document).ready(function(){
-    $("#selectable >div").click(function(){
-        $("#selectable>div").removeClass("selected");
+    $(".selectable >div").click(function(){
+        console.log("Click event fired for .selectable >div");
+        $(".selectable>div").removeClass("selected");
         $(this).addClass("selected");
     });
 });
@@ -38,7 +39,6 @@ Swal.fire({
     timer: 4500
   })
 
-  
 document.addEventListener('DOMContentLoaded',function(){
     var lrc1Elements = document.querySelectorAll('.lrc1section .lrc1 li');
     lrc1Elements.forEach(function(element){
@@ -67,6 +67,7 @@ function q1answer(){
             title:'正確答案！你真聰明',
             showConfirmButton: false,
             timer: 2500,
+            position:top,
         })
     } else{
         Swal.fire({
@@ -74,6 +75,7 @@ function q1answer(){
             title:'加油加油',
             showConfirmButton: false,
             timer: 2500,
+            position:top,
         })
     };
     var q1btn = document.getElementsByClassName('q1btn')[0];
@@ -93,8 +95,92 @@ document.addEventListener('DOMContentLoaded',function(){
                     question2.style.display = 'block';
                     var question1 = document.getElementsByClassName('question1')[0];
                     question1.style.display= 'none';
+
+                    setTimeout(function(){
+                        var q2song = new Audio("./audios/光年之外1.MP3");
+                        q2song.play();
+                    },2000);
+                }
+            })
+            })        
+        })
+    });
+    // 第二題   
+document.addEventListener('DOMContentLoaded',function(){
+    var lrc2Elements = document.querySelectorAll('.lrc2section .lrc2 li');
+    lrc2Elements.forEach(function(element){
+        element.addEventListener('animationend',function(){
+            var q2sections = document.querySelectorAll('.q2section');
+            q2sections.forEach(function(q2section){
+                q2section.style.display = 'flex';
+            })        
+        })
+    });   
+})
+
+function showq2btn(){
+    var q2btn = document.getElementById('q2btn');
+    q2btn.style.display= 'flex';
+}
+function q2answer(){
+    var q2answer = new Audio("./audios/光年之外2.MP3")
+    q2answer.play();
+    var lrc21section = document.getElementsByClassName('lrc21section')[0];
+    lrc21section.style.display ="block";
+    var lrc2section = document.getElementsByClassName('lrc2section')[0];
+    lrc2section.style.display = "none" ;
+    
+    var selectedAnswer2 = document.querySelector('.q2section.selected').id;
+    var correctAnswer2 = 'q2B';
+    if (selectedAnswer2 === correctAnswer2){
+        Swal.fire({
+            icon: 'success',
+            title:'正確答案！你真聰明',
+            showConfirmButton: false,
+            timer: 2500,
+            position:top,
+        })
+    } else{
+        Swal.fire({
+            icon: 'error',
+            title:'加油加油',
+            showConfirmButton: false,
+            timer: 2500,
+            position:top,
+
+        })
+    };
+    var q2btn = document.getElementsByClassName('q2btn')[0];
+    q2btn.style.display="none";
+}
+
+document.addEventListener('DOMContentLoaded',function(){
+    var lrc21Elements = document.querySelectorAll('.lrc21section .lrc21 li');
+    lrc21Elements.forEach(function(element){
+        element.addEventListener('animationend',function(){
+            Swal.fire({
+                showConfirmButton: true,
+                confirmButtonText: '下一題',
+            }).then((result)=>{
+                if(result.isConfirmed){
+                    var question3 = document.querySelector('.question3');
+                    question3.style.display = 'flex';
+                    var question2 = document.getElementsByClassName('question2')[0];
+                    question2.style.display= 'none';
+
+                    // setTimeout(function(){
+                    //     var q2song = new Audio("./audios/光年之外1.MP3");
+                    //     q2song.play();
+                    // },2000);
                 }
             })
             })        
         })
     });   
+    $(document).ready(function(){
+        $("#selectable2 >div").click(function(){
+            $("#selectable2>div").removeClass("selected");
+            $(this).addClass("selected");
+            $(this).css("background-color", "#FFB86F")
+        });
+    });

@@ -81,13 +81,12 @@ body{
     animation: shake 10s infinite;
   } 
 
-#songname{
+.songname{
 text-align: right;
 font-size: 20px;
 justify-content: end;
 margin-right: 5%;
 color: white;
-/* margin-top: 45px; */
 }
 .songnumber{
     text-align: left;
@@ -184,6 +183,7 @@ li{
     display: block;
     padding: 4px 0;
 }
+/* 正常是25秒 */
 .lrc11section .lrc11 li{
     animation: scroll2 25s linear forwards;
 }
@@ -196,10 +196,98 @@ li{
     }
 }
 #q117 {    animation-delay: 1s;   }
-#q118 {    animation-delay: 2s; animation-duration: 26s;  }
-#q119 {    animation-delay: 4s; animation-duration: 40s;  }
-#q120 {    animation-delay: 7s; animation-duration: 47s;  }
-
+#q118 {    animation-delay: 2s; animation-duration: 29s;  }
+#q119 {    animation-delay: 4s; animation-duration: 44s;  }
+#q120 {    animation-delay: 7s; animation-duration: 49s;  }
+/* 第二題 */
 .question2{
+    display: none;
+}
+.q2section{
+    display: none;
+    font-size: 17px;
+    color: black;
+    background-color:white;
+    border: 1px black solid;
+    margin: 5px auto;
+    height: 25%;
+    border-radius: 5px;
+    justify-content: center;
+}
+
+.lrc2section{
+    width: 350px;
+    height: 150px;
+    overflow-y: auto;
+    margin: 0 auto;
+}
+.lrc2 li{
+    display: block;
+    text-align: center;
+    padding: 3px 0;
+}
+/* 正常是49秒 */
+.lrc2section .lrc2 li{
+    animation: scroll21 49s linear forwards;
+}
+@keyframes scroll21{
+    from{
+        transform: translateY(0);
+    }
+    to{
+        transform: translateY(-1000px);
+    }
+}
+#q200 {    animation-delay: 12s;   }
+#q201 {    animation-delay: 14s;   }
+#q202 {    animation-delay: 17s;   }
+#q203 {    animation-delay: 19s;   }
+#q204 {    animation-delay: 21s;   }
+#q205 {    animation-delay: 24s;   }
+#q206 {    animation-delay: 26s;   }
+#q207 {    animation-delay: 27s;   }
+#q208 {    animation-delay: 29s;   }
+#q209 {    animation-delay: 29s;   }
+
+#q2btn{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 150px;
+    margin: auto;
+    background-color:lightblue;
+}
+.lrc21section{
+    width: 350px;
+    height: 150px;
+    overflow-y: auto;
+    margin: 0 auto;
+    display: none;
+}
+.lrc21 li{
+    display: block;
+    padding: 4px 0;
+}
+.lrc21section .lrc21 li{
+    animation: scroll22 38s linear forwards;
+}
+@keyframes scroll22{
+    from{
+        transform: translateY(0);
+    }
+    to{
+        transform: translateY(-1000px);
+    }
+}
+#q210 {    animation-delay: 5s;   }
+#q211 {    animation-delay: 7s;   }
+#q212 {    animation-delay: 9s;   }
+#q213 {    animation-delay: 12s;   }
+#q214 {    animation-delay: 14s;   }
+#q215 {    animation-delay: 16s;   }
+#q216 {    animation-delay: 18s;   }
+
+.question3{
     display: none;
 }
