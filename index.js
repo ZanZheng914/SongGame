@@ -14,7 +14,6 @@ function startGame(){
 
 $(document).ready(function(){
     $(".selectable >div").click(function(){
-        console.log("Click event fired for .selectable >div");
         $(".selectable>div").removeClass("selected");
         $(this).addClass("selected");
     });
@@ -117,6 +116,13 @@ document.addEventListener('DOMContentLoaded',function(){
         })
     });   
 })
+$(document).ready(function(){
+    $("#selectable2 >div").click(function(){
+        $("#selectable2>div").removeClass("selected2");
+        $(this).addClass("selected2");
+        // $(this).css("background-color", "#FFB86F")
+    });
+});
 
 function showq2btn(){
     var q2btn = document.getElementById('q2btn');
@@ -130,7 +136,7 @@ function q2answer(){
     var lrc2section = document.getElementsByClassName('lrc2section')[0];
     lrc2section.style.display = "none" ;
     
-    var selectedAnswer2 = document.querySelector('.q2section.selected').id;
+    var selectedAnswer2 = document.querySelector('.q2section.selected2').id;
     var correctAnswer2 = 'q2B';
     if (selectedAnswer2 === correctAnswer2){
         Swal.fire({
@@ -164,23 +170,93 @@ document.addEventListener('DOMContentLoaded',function(){
             }).then((result)=>{
                 if(result.isConfirmed){
                     var question3 = document.querySelector('.question3');
-                    question3.style.display = 'flex';
+                    question3.style.display = 'block';
                     var question2 = document.getElementsByClassName('question2')[0];
                     question2.style.display= 'none';
 
-                    // setTimeout(function(){
-                    //     var q2song = new Audio("./audios/光年之外1.MP3");
-                    //     q2song.play();
-                    // },2000);
+                    setTimeout(function(){
+                        var q2song = new Audio("./audios/浪子回頭1.MP3");
+                        q2song.play();
+                    },2000);
                 }
             })
             })        
         })
     });   
+
+
+    // 第三題
+    document.addEventListener('DOMContentLoaded',function(){
+        var lrc3Elements = document.querySelectorAll('.lrc3section .lrc3 li');
+        lrc3Elements.forEach(function(element){
+            element.addEventListener('animationend',function(){
+                var q3sections = document.querySelectorAll('.q3section');
+                q3sections.forEach(function(q3section){
+                    q3section.style.display = 'flex';
+                })        
+            })
+        });   
+    })
     $(document).ready(function(){
-        $("#selectable2 >div").click(function(){
-            $("#selectable2>div").removeClass("selected");
-            $(this).addClass("selected");
-            $(this).css("background-color", "#FFB86F")
+        $(".selectable3").click(function(){
+            $(".selectable3").removeClass("selected3");
+            $(this).addClass("selected3");
+            // $(this).css("background-color", "#FFB86F")
         });
     });
+    
+    function showq3btn(){
+        var q3btn = document.getElementById('q3btn');
+        q3btn.style.display= 'flex';
+    }
+    function q3answer(){
+        var q3answer = new Audio("./audios/浪子回頭2.MP3")
+        q3answer.play();
+        var lrc31section = document.getElementsByClassName('lrc31section')[0];
+        lrc31section.style.display ="block";
+        var lrc3section = document.getElementsByClassName('lrc3section')[0];
+        lrc3section.style.display = "none" ;
+        
+        var selectedAnswer3 = document.querySelector('.q3section.selected3').id;
+        var correctAnswer3 = 'q3A';
+        if (selectedAnswer3 === correctAnswer3){
+            Swal.fire({
+                icon: 'success',
+                title:'正確答案！你真聰明',
+                showConfirmButton: false,
+                timer: 2500,
+                position:top,
+            })
+        } else{
+            Swal.fire({
+                icon: 'error',
+                title:'加油加油',
+                showConfirmButton: false,
+                timer: 2500,
+                position:top,
+    
+            })
+        };
+        var q3btn = document.getElementsByClassName('q3btn')[0];
+        q3btn.style.display="none";
+    }
+    
+    document.addEventListener('DOMContentLoaded',function(){
+        var lrc31Elements = document.querySelectorAll('.lrc31section .lrc31 li');
+        lrc31Elements.forEach(function(element){
+            element.addEventListener('animationend',function(){
+                Swal.fire({
+                    background: 'rgba(255,255,255,0)',
+                    showConfirmButton: true,
+                    confirmButtonText: '試玩結束，感謝參與！',
+                }).then((result)=>{
+                    if(result.isConfirmed){
+                        var question4 = document.querySelector('.question4');
+                        question4.style.display = 'block';
+                        var question3 = document.getElementsByClassName('question3')[0];
+                        question3.style.display= 'none';
+                        }
+                })
+                })        
+            })
+        });   

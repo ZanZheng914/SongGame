@@ -265,6 +265,9 @@ li{
     margin: 0 auto;
     display: none;
 }
+.selected2{
+    background-color: #FFB86F;
+}
 .lrc21 li{
     display: block;
     padding: 4px 0;
@@ -288,6 +291,103 @@ li{
 #q215 {    animation-delay: 16s;   }
 #q216 {    animation-delay: 18s;   }
 
+/* 第三題 */
 .question3{
+    display: none;
+}
+.q3section{
+    display: none;
+    font-size: 17px;
+    color: black;
+    background-color:white;
+    border: 1px black solid;
+    margin: 5px auto;
+    height: 25%;
+    border-radius: 5px;
+    justify-content: center;
+}
+.selected3{
+    background-color: #FFB86F;
+}
+
+
+.lrc3section{
+    width: 350px;
+    height: 150px;
+    overflow-y: auto;
+    margin: 0 auto;
+}
+.lrc3 li{
+    display: block;
+    text-align: center;
+    padding: 3px 0;
+}
+/* 正常是58秒 */
+.lrc3section .lrc3 li{
+    animation: scroll3 58s linear forwards;
+}
+@keyframes scroll3{
+    from{
+        transform: translateY(0);
+    }
+    to{
+        transform: translateY(-1000px);
+    }
+}
+#q300 {    animation-delay: 22s; animation-duration: 70s;  }
+#q301 {    animation-delay: 27s;   }
+#q302 {    animation-delay: 29s;   }
+#q303 {    animation-delay: 31s;   }
+#q304 {    animation-delay: 33s;   }
+#q305 {    animation-delay: 34s;   }
+#q306 {    animation-delay: 34s;   }
+#q307 {    animation-delay: 34s;   }
+#q308 {    animation-delay: 34s;   }
+
+#q3btn{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 150px;
+    margin: auto;
+    background-color:lightblue;
+}
+.lrc31section{
+    width: 350px;
+    height: 150px;
+    overflow-y: auto;
+    margin: 0 auto;
+    display: none;
+}
+.lrc31 li{
+    display: block;
+    padding: 4px 0;
+}
+.lrc31section .lrc31 li{
+    animation: scroll31 44s linear forwards;
+}
+@keyframes scroll31{
+    from{
+        transform: translateY(0);
+    }
+    to{
+        transform: translateY(-1000px);
+    }
+}
+#q310 {    animation-delay: 2s;   }
+#q311 {    animation-delay: 4s;   }
+#q312 {    animation-delay: 4s;   }
+#q313 {    animation-delay: 6s;   }
+#q314 {    animation-delay: 9s;   }
+#q315 {    animation-delay: 10s;   }
+#q316 {    animation-delay: 11s;   }
+#q317 {    animation-delay: 12s;   }
+#q318 {    animation-delay: 13s;   }
+#q319 {    animation-delay: 14s;   }
+#q320 {    animation-delay: 15s; animation-duration: 55s;  }
+
+/* 第四題 */
+.question4{
     display: none;
 }
