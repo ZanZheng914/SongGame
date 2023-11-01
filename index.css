@@ -33,26 +33,15 @@ body{
     position: relative;
 }
 #logocat{
-    height: 220px;
-    width: 220px;
+    height: 260px;
+    width: 260px;
     display: flex;
     justify-content: center;
     margin: auto;
-    margin-top: 50px;
+    margin-top: 4%;
     opacity: 90%;
     z-index: 3;
 }
-#logohead{
-    height: 318px;
-    width: 318px;
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    margin: auto;
-    top:-46px;left: 82px;
-    z-index: 1;
-}
-
 #playlogo{
     height: 120px;
     width: 250px;
