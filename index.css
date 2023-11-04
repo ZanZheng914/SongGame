@@ -5,6 +5,9 @@
         height: auto;
     }    
 }
+::-webkit-scrollbar {
+    width: 0.0em;
+}
 body{
     margin: 0;
     padding: 0;
