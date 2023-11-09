@@ -1,5 +1,5 @@
 
-@media (min-width:1000px) {
+@media (min-width:1250px) {
     body{
         width: 100%;
         height: auto;
@@ -12,14 +12,15 @@ body{
     margin: 0;
     padding: 0;
     background-image: url(./images/pexels-cliford-mervil-2469122.jpg);
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
     height: 100vh;
+    background-position: center;
 }
 body{
     width: 100vw;
     /* max-width: 1000px; */
-    height: calc(100vw/ 1000* 1344);
+    /* height: calc(100vw/ 1000* 1344); */
     /* max-height: 1344px; */
     overflow: hidden;
 }
@@ -77,20 +78,23 @@ body{
   } 
 
 .songname{
-text-align: right;
 font-size: 20px;
-justify-content: end;
-margin-right: 5%;
+display: flex;
+justify-content: center;
+margin-left: 19%;
 color: white;
+margin-top: -30px;
 }
 .songnumber{
-    text-align: left;
+    /* text-align: left; */
+    display: flex;
     font-size: 26px;
-    justify-content: start;
-    margin-left: 9%;
+    justify-content: center;
+    margin-right: 24%;
     color:#EAF9D9;
     margin-top: 30px;
     font-weight: bold;
+    margin-top: -25px;
     }
 
 li{
@@ -100,16 +104,21 @@ li{
     text-align: center;
     font-weight: bold;
 }
+.containerq1{
+    width: 32%;
+    margin: 0 auto;
+}
 .q1section{
     display: none;
-    font-size: 22px;
+    font-size: 20px;
     color: black;
     background-color:white;
     border: 1px black solid;
     margin: 5px auto;
-    height: 25%;
     border-radius: 5px;
     justify-content: center;
+    width: 50%;
+    height: 25%; 
 }
 .selected{
     background-color: #FFB86F;
@@ -165,6 +174,7 @@ li{
     height: 40px;
     width: 150px;
     margin: auto;
+    margin-top: 1%;
     background-color:lightblue;
 }
 .lrc11section{
@@ -198,16 +208,21 @@ li{
 .question2{
     display: none;
 }
+.containerq2{
+    width: 32%;
+    margin: 0 auto;
+}
 .q2section{
     display: none;
-    font-size: 17px;
+    font-size: 20px;
     color: black;
     background-color:white;
     border: 1px black solid;
     margin: 5px auto;
-    height: 25%;
     border-radius: 5px;
     justify-content: center;
+    width: 50%;
+    height: 25%; 
 }
 
 .lrc2section{
@@ -290,16 +305,21 @@ li{
 .question3{
     display: none;
 }
+.containerq3{
+    width: 32%;
+    margin: 0 auto;
+}
 .q3section{
     display: none;
-    font-size: 17px;
+    font-size: 20px;
     color: black;
     background-color:white;
     border: 1px black solid;
     margin: 5px auto;
-    height: 25%;
     border-radius: 5px;
     justify-content: center;
+    width: 50%;
+    height: 25%; 
 }
 .selected3{
     background-color: #FFB86F;
